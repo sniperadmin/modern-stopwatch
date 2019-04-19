@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- Enabling compitability for small screens -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Rajdhani" rel="stylesheet">
+
+<script defer src="https://unpkg.com/promise-polyfill"></script>
+<body>
+<!-- particles.js container --> <div id="particles-js">
+     
+    <div class="timer">
+      <p class="thanks" style="margin-left:50px">Special thanks to Lara.Darine</p>
+    <div class="timer__controls">
+      <button data-time="20" class="timer__button" onclick="responsiveVoice.speak('Warning! | 20 seconds remaining', 'Australian Female')">20 Secs</button>
+      <button data-time="300" class="timer__button">Work 5</button>
+      <button data-time="900" class="timer__button">Quick 15</button>
+      <button data-time="1200" class="timer__button">Snack 20</button>
+      <button data-time="3600" class="timer__button">Lunch Break</button>
+      <form name="customForm" id="custom">
+        <input type="text" name="minutes" placeholder="Enter Minutes">
+      </form>
+    </div>
+    <div class="display">
+      <h1 id="coloring" class="display__time-left">00:00</h1>
+      <button id='stop' class='stop'>Stop timer</button>
+      <p class="display__end-time">Mission launch at 00:00</p>
+    </div>
+  </div>
+
+  
+  </div> <!-- stats - count particles --> <div class="count-particles"> <span class="js-count-particles">--</span> particles </div> <!-- particles.js lib - https://github.com/VincentGarreau/particles.js --> 
+  
+     <audio id="audio" src="https://www.soundjay.com/button/button-34.wav" autostart="false" ></audio>
+
+  <audio id="sec" src="https://www.soundjay.com/button/beep-22.wav" autostart="false" ></audio>
+  
+  <audio id="ost" src='http://66.90.93.122/ost/assassin-s-creed-iv-black-flag/rtnmwgja/02.%20Pyrates%20Beware.mp3' autostart="true"></audio>
+  
+  <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
+  <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> <!-- stats.js lib --> <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
+  
+
+</body>
