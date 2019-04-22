@@ -60,7 +60,7 @@ overflow: hidden;
   color: white;
   text-shadow:4px 4px 0 rgba(0,0,0,0.05);
   background: rgba(0,0,0,0.1);
-  width: 50%;
+  width: 250px;
   text-align: center;
 }
 
@@ -69,8 +69,8 @@ overflow: hidden;
   position: absolute;
   height: 50vh;
   flex-direction:column;
-  top:1%;
-  left:35%;
+  top:5%;
+  left:31%;
 }
 
 .timer__controls {
@@ -88,23 +88,29 @@ overflow: hidden;
 }
 
 .timer__controls input {
-  flex:1;
-  border:0;
-  padding: 0.5rem;
+	flex: 1;
+	border: 0;
+	padding: 0.5rem;
+	background: rgba(200,200,200,0.7);
+	border-radius: 8px;
+	height: 32px;
+	text-align: center;
+	font-size: 18pt;
 }
 
 .timer__button, .stop {
-  background:none;
-  border:0;
-  cursor: pointer;
-  color:white;
-  font-size: 1rem;
-  text-transform: uppercase;
-  background:rgba(0,0,0,0.1);
-  border-bottom:3px solid rgba(0,0,0,0.2);
-  border-right:1px solid rgba(0,0,0,0.2);
-  padding: 1rem;
-  font-family: 'Rajdhani', sans-serif;
+	background:none;
+	border:0;
+	cursor: pointer;
+	color:white;
+	font-size: 1rem;
+	text-transform: uppercase;
+	background:rgba(0,0,0,0.1);
+	border-bottom:3px solid rgba(0,0,0,0.2);
+	border-right:1px solid rgba(0,0,0,0.2);
+	padding: 1rem;
+	font-family: 'Rajdhani', sans-serif;
+	border-radius: 7px;
 }
 
 .timer__button:hover, .stop:hover {
@@ -125,10 +131,19 @@ overflow: hidden;
   justify-content: center;
 }
 
-.display__end-time, .thanks {
-  font-size: 2rem;
-  color:white;
+.display__end-time, .thanks, .display__start-time {
+	font-size: 2rem;
+	color:white;
+	text-align: center;
+	margin: auto;
 }
+
+.display__start-time {
+	background: rgba(0,0,0,0.1);
+	padding: 2px 15px 2px 15px;
+}
+
+
 
 @media screen and (max-width: 1250px) {
   .timer {

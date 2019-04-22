@@ -15,14 +15,16 @@ window.onload = function() {
 }
 
 //Setting Speech system Defaults
-        responsiveVoice.setDefaultVoice("Australian Female");
+        responsiveVoice.setDefaultVoice("US English Male");
         // Setting Variables
         let countdown;// storing setInterval in this function to be able to stop it at zero.
         const showTimer = document.querySelector('.display__time-left');
+		const starting = document.querySelector('.display__start-time');
         const endTime = document.querySelector('.display__end-time');
         let buttons = document.querySelectorAll('[data-time]');
         let sec = document.getElementById('sec');
-let stopTimer = document.getElementById('stop');
+		let stopTimer = document.getElementById('stop');
+
    ////////////////////////////////////////
   //      Programming the countdown     //
  //          and the time left         //
@@ -59,7 +61,7 @@ stopTimer.addEventListener('click',reset);
             displayEndTime(then);
             //setting animation in one second and storing it in a variable (countdown)
             //to be able to clearInterval after it reaches zero
- countdown = setInterval(() => {
+ 			countdown = setInterval(() => {
                 const secondsLeft = Math.round((then - Date.now())/1000);
                 //Checking when to stop the function
    
@@ -104,8 +106,8 @@ stopTimer.addEventListener('click',reset);
 			  responsiveVoice.speak(`Your Break Has Finished. Hurry up before you get fired! Thank you for using our services`);
           } else if (minutes == 0 && remainingSecs < 11) {
 			
-					responsiveVoice.speak(`${remainingSecs}`);	
-				}
+			  responsiveVoice.speak(`${remainingSecs}`);	  
+		  }
 		//***************** Update Complete ***************************************
 			
          /* (the previous update) for voice alarm for the last ten seconds 
@@ -148,9 +150,7 @@ stopTimer.addEventListener('click',reset);
         } // ******** Ending voice alarm for each minute ********  
 // ******** Ending voice alarm for each minute ********  
 
-		
-			
-        
+		        
         function displayEndTime(timestamp) {
             const end = new Date(timestamp);
             const hour = end.getHours();
@@ -160,6 +160,8 @@ stopTimer.addEventListener('click',reset);
             endTime.textContent = `Break ends at ${CorrHours < 10 ? 0 : ''}${CorrHours}:${minutes < 10 ? 0 : ''}${minutes}`
         }
         
+
+
         function startTimer(){
             var sound = document.getElementById("audio");
             sound.play();
@@ -173,5 +175,6 @@ stopTimer.addEventListener('click',reset);
             e.preventDefault();
             const mins = this.minutes.value;
             timer(mins * 60);
+			starting.textContent = `${mins}` + " minute break";
             this.reset();
         });
