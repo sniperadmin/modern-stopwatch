@@ -95,14 +95,21 @@ stopTimer.addEventListener('click',reset);
             showTimer.textContent = display;
             document.title = display;
           
-          
+          //***************** UPDATED ************************************************
           // voice alarm for each minute
           if(remainingSecs == 0 && minutes != 0){
             responsiveVoice.speak(`${minutes} minutes remaining | till break ends`);
-          }else if (minutes == 0 && remainingSecs == 0) {
-            responsiveVoice.speak(`Your Break Has Finished. Hurry up before you get fired! Thank you for using our services`);
-          }
-          // voice alarm for the last ten seconds 
+          } else if (minutes == 0 && remainingSecs == 0) {
+
+			  responsiveVoice.speak(`Your Break Has Finished. Hurry up before you get fired! Thank you for using our services`);
+          } else if (minutes == 0 && remainingSecs < 11) {
+			
+					responsiveVoice.speak(`${remainingSecs}`);	
+				}
+		//***************** Update Complete ***************************************
+			
+         /* (the previous update) for voice alarm for the last ten seconds 
+		
           if (minutes == 0){
             switch(remainingSecs){
               case 10:
@@ -136,7 +143,13 @@ stopTimer.addEventListener('click',reset);
                 responsiveVoice.speak('1');
             }
           }
-        }
+			*/				
+				
+        } // ******** Ending voice alarm for each minute ********  
+// ******** Ending voice alarm for each minute ********  
+
+		
+			
         
         function displayEndTime(timestamp) {
             const end = new Date(timestamp);
