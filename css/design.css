@@ -1,56 +1,20 @@
-/* ---- reset ---- */ 
-body { 
-background-color: #232741;
-margin:0; 
-font-family: 'Rajdhani', sans-serif;
-} 
+@import url('https://fonts.googleapis.com/css?family=Rajdhani&display=swap');
 
-canvas{ 
-  display: block; 
-  vertical-align: bottom; 
-} 
-/* ---- particles.js container ---- */ #particles-js{ 
-position:absolute; 
-width: 100%;
-height: 100%;
-background-color: #232741;  
-background-repeat: no-repeat; 
+/* ---- reset ---- */
+body {
+  background-color: #232741;
+  margin: 0;
+  font-family: 'Rajdhani', sans-serif;
 }
-/* ---- stats.js ---- */ 
-.count-particles{ 
-background: #000022; 
-position: absolute; 
-top: 48px; 
-left: 0; 
-width: 80px; 
-color: #13E8E9; 
-font-size: .8em; 
-text-align: left; 
-text-indent: 4px; 
-line-height: 14px;
-padding-bottom: 2px; 
-font-family: 'Rajdhani', sans-serif; 
-font-weight: bold; 
-} 
 
-.js-count-particles{ 
-font-size: 1.1em; 
-} 
-
-#stats, .count-particles{ 
--webkit-user-select: none; 
-margin-top: 5px; 
-margin-left: 5px; 
-} 
-
-#stats{ 
-border-radius: 3px 3px 0 0; 
-overflow: hidden; 
-} 
-
-.count-particles{ 
-  border-radius: 0 0 3px 3px; 
+#big-box {
+  /* position:absolute;  */
+  width: 100%;
+  height: 100%;
+  background-color: #232741;
+  background-repeat: no-repeat;
 }
+
 
 .display__time-left {
   display: block;
@@ -58,8 +22,8 @@ overflow: hidden;
   font-size: 5rem;
   margin: 0;
   color: white;
-  text-shadow:4px 4px 0 rgba(0,0,0,0.05);
-  background: rgba(0,0,0,0.1);
+  text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.05);
+  background: rgba(0, 0, 0, 0.1);
   width: 250px;
   text-align: center;
 }
@@ -68,88 +32,72 @@ overflow: hidden;
   /*display:flex;*/
   position: absolute;
   height: 50vh;
-  flex-direction:column;
-  top:5%;
-  left:31%;
+  flex-direction: column;
+  top: 5%;
+  left: 31%;
 }
 
 .timer__controls {
   display: block;
-    margin: auto;
-}
-
-.timer__controls > * {
-  /*flex:1;*/
-}
-
-.timer__controls form {
-  /*flex:1;*/
-  display: flex;
+  margin: auto;
 }
 
 .timer__controls input {
-	flex: 1;
-	border: 0;
-	padding: 0.5rem;
-	background: rgba(200,200,200,0.7);
-	border-radius: 8px;
-	height: 32px;
-	text-align: center;
-	font-size: 18pt;
+  flex: 1;
+  border: 0;
+  width: 100%;
+  padding: 0.5rem;
 }
 
-.timer__button, .stop {
-	background:none;
-	border:0;
-	cursor: pointer;
-	color:white;
-	font-size: 1rem;
-	text-transform: uppercase;
-	background:rgba(0,0,0,0.1);
-	border-bottom:3px solid rgba(0,0,0,0.2);
-	border-right:1px solid rgba(0,0,0,0.2);
-	padding: 1rem;
-	font-family: 'Rajdhani', sans-serif;
-	border-radius: 7px;
+.timer__button,
+.stop {
+  background: none;
+  border: 0;
+  cursor: pointer;
+  color: white;
+  font-size: 1rem;
+  text-transform: uppercase;
+  background: rgba(0, 0, 0, 0.1);
+  border-bottom: 3px solid rgba(0, 0, 0, 0.2);
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  font-family: 'Rajdhani', sans-serif;
 }
 
-.timer__button:hover, .stop:hover {
-  background:rgba(200,200,200,0.7);
-  outline:0;
+.timer__button:hover,
+.stop:hover {
+  background: rgba(200, 200, 200, 0.7);
+  outline: 0;
 }
 
-.timer__button:focus, .stop:focus {
-  background:rgba(0,200,0,0.7);
-  outline:0;
+.timer__button:focus,
+.stop:focus {
+  background: rgba(0, 200, 0, 0.7);
+  outline: 0;
 }
 
 .display {
   /*flex:1;*/
-  display:flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.display__end-time, .thanks, .display__start-time {
-	font-size: 2rem;
-	color:white;
-	text-align: center;
-	margin: auto;
+.display__end-time,
+.thanks {
+  font-size: 2rem;
+  color: white;
+  text-align: center;
+  margin: auto;
 }
-
-.display__start-time {
-	background: rgba(0,0,0,0.1);
-	padding: 2px 15px 2px 15px;
-}
-
-
 
 @media screen and (max-width: 1250px) {
   .timer {
-    top:20%;
+    top: 20%;
     left: 36%;
-}
+  }
+
   .timer__button {
     font-size: 1rem;
   }
@@ -157,9 +105,10 @@ overflow: hidden;
 
 @media screen and (max-width: 1000px) {
   .timer {
-    top:20%;
+    top: 20%;
     left: 20%;
-}
+  }
+
   .timer__button {
     font-size: 1rem;
   }
@@ -167,9 +116,10 @@ overflow: hidden;
 
 @media screen and (max-width: 736px) {
   .timer {
-    top:20%;
+    top: 20%;
     left: 15%;
-}
+  }
+
   .timer__button {
     font-size: 1rem;
   }
@@ -178,9 +128,10 @@ overflow: hidden;
 
 @media screen and (max-width: 655px) {
   .timer {
-    top:20%;
+    top: 20%;
     left: 10%;
-}
+  }
+
   .timer__button {
     font-size: 1rem;
   }
@@ -189,9 +140,10 @@ overflow: hidden;
 
 @media screen and (max-width: 598px) {
   .timer {
-    top:20%;
+    top: 20%;
     left: 7%;
-}
+  }
+
   .timer__button {
     font-size: 1rem;
   }
@@ -201,7 +153,8 @@ overflow: hidden;
   .timer {
     top: 20%;
     left: 7%;
-}
+  }
+
   .timer__button {
     font-size: 0.9rem;
   }
@@ -211,7 +164,8 @@ overflow: hidden;
   .timer {
     top: 20%;
     left: 6%;
-}
+  }
+
   .timer__button {
     font-size: 0.83rem;
   }
@@ -221,7 +175,8 @@ overflow: hidden;
   .timer {
     top: 20%;
     left: 6%;
-}
+  }
+
   .timer__button {
     font-size: 0.7rem;
   }
@@ -230,79 +185,64 @@ overflow: hidden;
 @media screen and (max-width: 445px) {
   .timer {
     top: 20%;
-    left: 6%;
-}
+    left: 2.5%;
+  }
+
   .timer__button {
-    font-size: 0.6rem;
+    font-size: 0.7rem;
   }
 }
 
 @media screen and (max-width: 420px) {
   .timer {
-  top:20%;
-  left: 7%;
+    top: 20%;
+    left: 5%;
+  }
+
+  .timer__button {
+    font-size: 0.85rem;
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  }
+
+  .timer__controls input {
+    padding: 0.4rem;
+    width: 95%;
+  }
 }
+
+@media screen and (max-width: 350px) {
+  .timer {
+    top: 20%;
+    left: 9%;
+  }
+
   .timer__button {
     font-size: 0.85rem;
     padding: 0.1rem;
   }
-  
+
   .timer__controls input {
-  padding: 0.4rem;
-    width:20%;
+    padding: 0.4rem;
+    width: 20%;
+  }
+
 }
+
 
 @media screen and (max-width: 377px) {
   .timer {
-  top:20%;
-  left: 7%;
-}
+    top: 20%;
+    left: 1%;
+  }
+
   .timer__button {
     font-size: 0.85rem;
-    padding: 0.1rem;
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
   }
-  
+
   .timer__controls input {
-  padding: 0.4rem;
-    width:20%;
-}
+    padding: 0.4rem;
+    width: 95%;
+  }
 
 }
-  
-  
-  @media screen and (max-width: 350px) {
-  .timer {
-  top:20%;
-  left: 4%;
-}
-  .timer__button {
-    font-size: 0.85rem;
-    padding: 0.1rem;
-  }
-  
-  .timer__controls input {
-  padding: 0.4rem;
-    width:20%;
-}
-
-}
-  
-  
-  @media screen and (max-width: 377px) {
-  .timer {
-  top:20%;
-  left: 3%;
-}
-  .timer__button {
-    font-size: 0.85rem;
-    padding: 0.1rem;
-  }
-  
-  .timer__controls input {
-  padding: 0.4rem;
-    width:20%;
-}
-
-}
-  
-  
